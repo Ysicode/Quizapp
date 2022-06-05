@@ -1,16 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+    <title>Quizapp</title>
 
-    <div>
-        <img src="img/nic" alt="">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <script src="script.js"></script>
+    <script src="questions.js"></script>
+</head>
+
+<body>
+    <div class="main_div">
+        <div id="mobile_menu" class="mobile_menu show_mobile">
+            <img onclick="showStart()" class="mobile_menu_logo" src="img/logo.png" alt="">
+            <button onclick="toggleMobileMenu()" class="start_button show_mobile">Spiel wählen</button>
+
+        </div>
+        <div id="sidebar" class="sidebar hide_mobile">
+            <img onclick="showStart()" src="img/logo.png" alt="">
+            <ul class="list_links">
+                <li class="list_links_item">
+                    <a class="nav_link" id="allgemein" onclick="choiceGame(0,'allgemein')" href="#">Allgemein</a>
+                </li>
+                <li class="list_links_item">
+                    <a class="nav_link" id="sport" onclick="choiceGame(1,'sport')" href="#">Sport</a>
+                </li>
+                <li class="list_links_item">
+                    <a class="nav_link" id="natur" onclick="choiceGame(2,'natur')" href="#">Natur</a>
+                </li>
+                <p class="kids">KIDS</p>
+                <li class="list_links_item">
+                    <a class="nav_link" id="kids_mathe" onclick="choiceGame(3,'kids_mathe')" href="#">Mathe</a>
+                </li>
+                <li class="list_links_item">
+                    <a class="nav_link" id="kids_mix" onclick="choiceGame(4,'kids_mix')" href="#">Wissen</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="quiz_start" id="quiz_start">
+            <h1 class="welcome">Willkommen bei der QuizApp</h1>
+            <h3 class="enjoy">Enjoy</h3>
+            <h3 class="simon">©Simon Weiss 2022</h3>
+        </div>
+
+        <div id="quiz_card" class="quiz_card d-none">
+            <div class="progress" id="progress">
+                <div id="progress_bar" class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0"
+                    aria-valuemin="0" aria-valuemax="100">
+                    <p class="progress_count" id="progress_count">25%</p>
+                </div>
+            </div>
+            <div class="area_questions">
+                <div class="area_answer">
+                    <div id="answer_overlay" class="answer_overlay d-none">
+
+                    </div>
+                    <h1 class="question" id="question"></h1>
+                    <div id="box_answer1" class="answer_box" onclick="answer('answer1')">
+                        <p id="letter_answer1" class="abcd">A</p>
+                        <h2 id="answer1" class="answer"></h2>
+                    </div>
+                    <div id="box_answer2" class="answer_box" onclick="answer('answer2')">
+                        <p id="letter_answer2" class="abcd">B</p>
+                        <h2 id="answer2" class="answer"></h2>
+                    </div>
+                    <div id="box_answer3" class="answer_box" onclick="answer('answer3')">
+                        <p id="letter_answer3" class="abcd">C</p>
+                        <h2 id="answer3" class="answer"></h2>
+                    </div>
+                    <div id="box_answer4" class="answer_box" onclick="answer('answer4')">
+                        <p id="letter_answer4" class="abcd">D</p>
+                        <h2 id="answer4" class="answer"></h2>
+                    </div>
+                </div>
+                <div class="area_next_question">
+                    <span class="questions_count">
+                        <p id="questions_count"></p>von <p id="all_questions"></p> Fragen
+                    </span>
+
+                    <button onclick="nextQuestion()" id="next_button" class="next_button" disabled>Nächste
+                        Frage
+                    </button>
+
+                </div>
+            </div>
+        </div>
+        <div id="quiz_end" class="quiz_end d-none">
+            <img class="end_picture" src="img/brain result.png" alt="">
+            <h1 class="end">Quiz beendet</h1>
+            <h2 class="your_score">Dein Score</h2>
+            <div class="d-flex">
+                <p class="score" id="score">5</p>
+                <p class="score">/</p>
+                <p id="total_questions" class="score">5</p>
+            </div>
+            <button onclick="newGame()" class="button_replay">Nochmal spielen</button>
+        </div>
+
+
     </div>
-    
+
+
+
+
 </body>
+
 </html>

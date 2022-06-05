@@ -1,0 +1,371 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(118 112 94) !important;
+    height: 100vh;
+    margin: 0;
+}
+
+.main_div {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    background: #20485e;
+    width: 15vw;
+}
+
+.sidebar img {
+    margin: 20px;
+    cursor: pointer;
+}
+
+.list_links {
+    list-style: none;
+    color: #20485e;
+    font-size: 20px;
+    text-align: center;
+    padding-left: 0;
+    margin-top: 25px;
+}
+
+.nav_link:hover {
+    color: rgb(166 163 157);
+}
+
+.nav_link {
+    text-decoration: none;
+    color: white;
+}
+
+.active {
+    font-weight: 700;
+    color: rgb(166 163 157);
+}
+
+.kids {
+    background-image: linear-gradient(0deg, #f05f6d 10%, rgb(244, 208, 63) 57%, rgb(92 150 189), rgb(72, 201, 176));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-top: 1.3rem;
+    margin-bottom: 0;
+    font-weight: 800;
+    font-size: 30px;
+}
+
+.quiz_start {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 85vw;
+    justify-content: center;
+}
+
+.welcome {
+    font-size: 30px;
+    margin-top: 25vh;
+    margin-bottom: 18vh;
+}
+
+.enjoy {
+    font-size: 15px;
+    font-weight: 300;
+}
+
+.simon {
+    font-size: 15px;
+    font-weight: 100;
+}
+
+.quiz_card {
+    background-color: #d1cccc;
+    background-size: cover;
+    width: 85vw;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+}
+
+.progress {
+    width: 100%;
+    border-radius: 0;
+    height: 1.3rem;
+    background-color: #d1cccc;
+    ;
+}
+
+.progress-bar {
+    background-color: #20485e;
+}
+
+.progress_count {
+    margin-bottom: 0px;
+}
+
+.area_questions {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.question {
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 3px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 25px;
+    font-weight: 500;
+    width: 70%;
+}
+
+.area_answer {
+    width: 75%;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.answer_box {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background: white;
+    padding: 5px;
+    width: 100%;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-bottom: 7px;
+}
+
+.answer_box:hover {
+    cursor: pointer;
+    background-color: rgb(226 226 226);
+
+}
+
+.answer {
+    margin-top: 0;
+    margin-bottom: 0rem;
+    margin-left: 40px;
+    font-size: 20px;
+}
+
+.answer_overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 99;
+}
+
+.d-none {
+    display: none;
+}
+
+.abcd {
+    margin-top: 0;
+    margin-bottom: 0rem;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    background: #c7b39c;
+}
+
+.area_next_question {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+}
+
+.questions_count {
+    font-size: 20px;
+    display: flex;
+    width: 150px;
+    justify-content: space-evenly;
+}
+
+.next_button {
+    width: fit-content;
+    height: fit-content;
+    font-size: 25px;
+    background-color: #c7b39c;
+    border: none;
+}
+
+.quiz_end {
+    background: url('img/tropy.png');
+    background-size: 30vh;
+    background-repeat: no-repeat;
+    background-position: right;
+    width: 85vw;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+    background-color: #d1cccc;
+}
+
+.end_picture {
+    width: 100px;
+    object-fit: contain;
+}
+
+.button_replay {
+    color: white;
+    font-size: 20px;
+    background-color: #20485e;
+    font-weight: 200;
+    width: 200px;
+    height: 50px;
+    border: none;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.your_score {
+    font-size: 20px;
+}
+
+.score {
+    font-size: 20px;
+}
+
+.d-none {
+    display: none;
+}
+
+.show_mobile {
+    display: none;
+}
+
+
+@media(max-width: 840px) {
+    .hide_mobile {
+        display: none;
+    }
+
+    .show_mobile {
+        display: flex;
+    }
+
+    .main_div, .quiz_start, .quiz_card, .quiz_end {
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .mobile_menu {
+        background-color: #20485e;
+        align-items: center;
+        width: 100vw;
+        height: 11vh;
+        position: absolute;
+        justify-content: space-between;
+        padding-right: 20px;
+        padding-left: 20px;
+        padding-bottom: 10px;
+        padding-top: 10px;
+        border-bottom: 1px solid white;
+    }
+
+    .mobile_menu_logo {
+        width: 70px;
+        object-fit: contain;
+    }
+
+    .welcome {
+        margin-top: 15vh;
+    }
+
+    .start_button {
+        background: none;
+        border: none;
+        border-radius: 0;
+        padding: 7px;
+        border: 1px dashed white;
+        width: fit-content;
+        height: fit-content;
+        font-size: 22px;
+        color: #f9fafb;
+    }
+
+    .sidebar {
+        flex-direction: column;
+        background: #20485e;
+        width: 100vw;
+        height: 61vh;
+        margin-top: 11vh;
+        position: absolute;
+        z-index: 999;
+    }
+
+    .sidebar img {
+        display: none;
+    }
+
+    .list_links {
+        margin-top: 10vh;
+    }
+
+    .list_links_item {
+        margin-bottom: 8px;
+        margin-top: 8px;
+    }
+
+    .kids {
+        margin-top: 2rem;
+    }
+
+    .progress {
+        margin-top: 11vh;
+    }
+
+    .question, .answer_box {
+        width: 90%;
+    }
+
+    .area_next_question {
+        flex-direction: column;
+        justify-content: center;
+        width: 60%;
+    }
+
+    .quiz_end {
+        background-size: 100px;
+    }
+
+    .quiz_start {
+        text-align: center;
+    }
+
+    .next_button {
+        font-size: 20px;
+        padding: 10px;
+    }
+
+    .questions_count {
+        font-size: 15px;
+        width: 110px;
+    }
+
+
+
+
+}
